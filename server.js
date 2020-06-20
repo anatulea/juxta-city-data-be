@@ -15,7 +15,7 @@ const profileRouter = require('./routers/profile-router.js');
 const server = express();
 
 server.use(helmet());
-server.use(cors());
+server.use(cors({origin:'http://localhost:3000'}));
 server.use(express.json());
 server.use(morgan('dev'));
 server.use(
